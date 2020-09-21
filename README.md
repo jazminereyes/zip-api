@@ -1,6 +1,6 @@
 # ZIP Airlines API
 
-Browsable API using Django Rest Framework
+API using Django Rest Framework
 
 ### Get Started
 
@@ -41,4 +41,9 @@ Access the API via Postman by entering `localhost:8000/api`
         "passenger_count: 5
     }
 ]
+```
+
+### Tests
+```
+python manage.py test
 ```

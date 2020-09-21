@@ -15,7 +15,7 @@ class AirplaneListAPIView(generics.GenericAPIView):
         return Response(serializer.data)
 
     def post(self, request, *args, **kwargs):
-        """ POST method to allow input of more than 1 airplanes
+        """ POST method to allow input of more than 1 airplane
             JSON Format should be:
             [
                 {
