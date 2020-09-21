@@ -1,0 +1,6 @@
+django
+djangorestframework
+django-extensions
+coverage
+pylint
+httpie
