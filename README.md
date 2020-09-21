@@ -47,3 +47,9 @@ Access the API via Postman by entering `localhost:8000/api`
 ```
 python manage.py test
 ```
+
+### Coverage
+![img](coverage.png)
+```
+coverage report
+```
