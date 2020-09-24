@@ -1,4 +1,4 @@
-from django.http import Http404
+from django.http import Http404, HttpRequest
 from django.shortcuts import render
 from rest_framework import generics, status
 from rest_framework.response import Response
@@ -10,11 +10,11 @@ class AirplaneListAPIView(generics.GenericAPIView):
     queryset = Airplane.objects.all()
     serializer_class = serializers.AirplaneSerializer
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request: HttpRequest) -> Response:
         serializer = self.get_serializer(self.get_queryset(), many=True)
         return Response(serializer.data)
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request: HttpRequest) -> Response:
         """ POST method to allow input of more than 1 airplane
             JSON Format should be:
             [
